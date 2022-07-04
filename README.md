@@ -12,7 +12,12 @@ Animal Detection requires The MegaDetector [model file](https://github.com/micro
 * Deep 3D Fitting
 * Identification through Deep Metric Learning
 ## Setup
-* Create the virtual environment `python -m venv venv_zebra` 
+
+* Create the virtual environment - `python -m venv venv_zebra` 
+* Activate the env - `source venv_zebra\bin\activate` 
+* Add the required packages, then deactivate and reactivate the env - `pip install -r requirements.txt`
+* run setup.sh to get the submodule repo's - `python setup.sh` 
+
 
 ## Citation
 Coming soon
