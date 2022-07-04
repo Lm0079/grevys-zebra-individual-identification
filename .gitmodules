@@ -1,0 +1,6 @@
+[submodule "AnimalDetection/ai4eutils"]
+	path = AnimalDetection/ai4eutils
+	url = https://github.com/Microsoft/ai4eutils
+[submodule "AnimalDetection/CameraTraps"]
+	path = AnimalDetection/CameraTraps
+	url = https://github.com/microsoft/CameraTraps.git
