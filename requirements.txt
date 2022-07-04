@@ -1,0 +1,8 @@
+tensorflow 
+pillow 
+humanfriendly 
+matplotlib 
+tqdm 
+jsonpickle 
+statistics 
+requests
