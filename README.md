@@ -17,7 +17,7 @@ Coming soon
 ## Models
 Animal Detection requires The MegaDetector [model file](https://github.com/microsoft/CameraTraps/blob/main/megadetector.md#using-the-model). It will assume the model is downloaded to the "modules" folder. If a different model is used change the name in the script, as the current script will assume you downloaded MDv4.1, there are minor changes required to run the more recent model files (such as MDv5a and MDv5b) which are described [here](https://github.com/microsoft/CameraTraps/blob/main/megadetector.md#using-the-model)
 
-
+`SpeciesClassification/classify_images.py ` contains urls to the classification model and taxonomy utalised. These can be downloaded and the urls replaced with paths to their location.
 
 
 ## Citation
