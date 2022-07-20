@@ -1,0 +1,2 @@
+In this folder, all local models should be saved. 
+Such as the MD model, any SC models, the 3D fitting model and metric learning model

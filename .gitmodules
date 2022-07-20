@@ -4,3 +4,6 @@
 [submodule "AnimalDetection/CameraTraps"]
 	path = AnimalDetection/CameraTraps
 	url = https://github.com/microsoft/CameraTraps.git
+[submodule "SpeciesClassification"]
+	path = SpeciesClassification
+	url = https://github.com/Lm0079/SpeciesClassification
