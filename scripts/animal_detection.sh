@@ -9,7 +9,7 @@
 cd ..
 source  venv_zebra/bin/activate
 export PYTHONPATH="$PYTHONPATH:$(realpath AnimalDetection/CameraTraps):$(realpath AnimalDetection/ai4utils)"
-python AnimalDetection/CameraTraps/detection/run_detector_batch.py models/md_v4.1.0.pb md_dataset  md_detection_output.json
+python AnimalDetection/CameraTraps/detection/run_detector_batch.py models/md_v4.1.0.pb /user/work/gh18931/diss/datasets/md_dataset/  md_detection_output.json
 
 python scripts/animal_crop.py --input_filepath=md_detection_output.json --output_filepath=MD_output
 

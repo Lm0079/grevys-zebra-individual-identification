@@ -44,12 +44,12 @@ Only stores boundingboxes of animals that have a confidence level over a thresho
 '''
 def predicted_bboxes(inputpath, threshold):
 	megaDetectorBboxes = []
+	# TODO: build in case for detection failure
 	with open(inputpath) as json_file:
 		data = json.load(json_file)
 		for p in data['images']:
 			file_name = p['file']
 			bbox = {"file": file_name}
-
 			for detection in p['detections']:
 				if detection['conf'] > threshold and detection['category'] == "1":
 					if "bbox" in bbox:

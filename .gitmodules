@@ -7,3 +7,9 @@
 [submodule "SpeciesClassification"]
 	path = SpeciesClassification
 	url = https://github.com/Lm0079/SpeciesClassification
+[submodule "smalst"]
+	path = smalst
+	url = https://github.com/Lm0079/smalst.git
+[submodule "MetricLearningIdentification"]
+	path = MetricLearningIdentification
+	url = https://github.com/Lm0079/MetricLearningIdentification.git
