@@ -2,7 +2,7 @@
 # TODO: improve pipeline and fail cases 
 # Pipeline script going through all the stages.
 
-# Activate the environment
+# Activate the environment can skip if manully want to do this step
 source setup.sh
 
 # Set up environment variables
@@ -24,13 +24,13 @@ python CameraTraps/detection/run_tf_detector_batch.py models/md_v4.1.0.pb $DATAP
 python scripts/animal_crop.py --md_filepath=$DATAPATH/MegaDetector_output/md_output.json --input_filepath=$DATAPATH --outout_filepath=$DATAPATH/MegaDetector_output
 # Species Classification
 python SpeciesClassification/classify_images.py 
-# Retains images of Grevy's Zebras
+# Retains images of Grevy's Zebras only
 python scripts/species_cut.py --species_filepath=$OUTPUT --output_filepath=$DATAPATH/SpeciesClassification_output
-#
+# SMALST generated the texture maps for each image 
 python -m smalst.smal_eval --img_path=$DATAPATH/SpeciesClassification_output/ --bgval=0 --num_train_epoch=130 -use_annotations=False --segm_eval=False   --save_input=True --img_ext='.jpg' --out_path=$DATAPATH/SMALST_output  --name="smal_net"
-#
+# Crops the texture maps to keep only right backside
 python scripts/smalst_crop.py --input=$DATAPATH/SMALST_output --output=$DATAPATH/DML_input
-#
+# Embedding space is generated and images are mapping into the space. KNN is used to cluster the point to predict its class. 
 python MetricLearningIdentification/run.py --model_path=$MODEL --input=$DATAPATH/DML_input --train_embeddings=train_embeddings.npz --save_path=$DATAPATH --class_labels=labels-id.csv
-#
+# The class labels can be compared to find out the individual ID of the Grevy's zebra 
 
